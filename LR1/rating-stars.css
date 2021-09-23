@@ -1,0 +1,25 @@
+.rating {
+    width: 100px;
+}
+.rating label {
+    float: right;
+    width: 20px;
+    height: 18px;
+    cursor: pointer;
+}
+.rating label:not(:first-of-type) {
+    padding-right: 2px;
+}
+.rating label:before {
+    content: "★";
+    font-size: 18px;
+    color: #CCCCCC;
+    line-height: 1;
+}
+.rating input {
+    display: none;
+}
+
+.rating input:checked ~ label:before, .rating:not(:checked) > label:hover:before, .rating:not(:checked) > label:hover ~ label:before {
+    color: red;
+}
