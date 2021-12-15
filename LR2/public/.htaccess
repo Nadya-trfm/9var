@@ -1,0 +1,5 @@
+# если это не файл или папка, тогда выполяняем правило переадресации index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# флаг QSA-помогает не перзаписывать строку запроса, а добавлять параметры в уже имеющуюся
+RewriteRule (.*) index.php?$1 [L,QSA]

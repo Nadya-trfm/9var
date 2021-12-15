@@ -1,0 +1,5 @@
+AddDEfaultCharset utf-8
+# включаем модуль write
+RewriteEngine On
+# направляемв се запросы в папку public
+RewriteRule ^(.*)$ /public/$1
